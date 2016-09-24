@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todo</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+  <h2>TO DO LIST</h2>
+  <section>
+      <article>
+        <h3>ADD ITEM</h3>
+        <div class="raya-align">
+          <input type="text" name="add-text" class="add-text">
+          <a class="add" href="">Add</a>
+        </div>
+
+      </article>
+      
+      <article>
+        <h3>TODO</h3>
+        <div class="raya-align">
+          <label><input type="checkbox" name="check" class="check">Este es un todo</label>
+          <a class="edit" href="">Edit</a>
+          <a class="delete" href="">Delete</a>
+        </div>
+        <div class="show-todo"></div>
+      </article>
+      
+      <article>
+        <h3>COMPLETED</h3>
+        <div class="raya-align">
+          <label class="completed">Este es un todo</label>  
+          <a class="delete" href="">Delete</a>
+        </div>
+      </article>
+  </section>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
