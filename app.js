@@ -1,12 +1,13 @@
+var App = (function(ShowList, Add){
 
-$( ".add" ).click(function() {
-  var textTodo = $(".add-text").val();
-  $(".show-todo").append(textTodo);
-  //addTodo(textTodo);
+    var initialize = [
+        ShowList,
+        Add,
+        TodoList('todo-list')
+    ]
 
-});
+    initialize.forEach(function(module){
+        module.init();
+    });
 
-var addTodo = function(textTodo){
-	$(".show-todo").append(textTodo);
-}
-
+})(ShowList, Add);

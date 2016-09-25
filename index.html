@@ -16,32 +16,44 @@
       <article>
         <h3>ADD ITEM</h3>
         <div class="raya-align">
-          <input type="text" name="add-text" class="add-text">
-          <a class="add" href="">Add</a>
+          <input id="todo-text" type="text" name="add-text" class="add-text">
+          <a id="add" class="add" href="#">Add</a>
         </div>
 
       </article>
-      
       <article>
         <h3>TODO</h3>
         <div class="raya-align">
-          <label><input type="checkbox" name="check" class="check">Este es un todo</label>
-          <a class="edit" href="">Edit</a>
-          <a class="delete" href="">Delete</a>
+          <div id="todo-list" class="todo-list">
+          </div>
         </div>
-        <div class="show-todo"></div>
       </article>
-      
       <article>
         <h3>COMPLETED</h3>
         <div class="raya-align">
-          <label class="completed">Este es un todo</label>  
-          <a class="delete" href="">Delete</a>
+          <label class="completed">Este es un todo</label>
+          <a class="delete" href="#">Delete</a>
         </div>
       </article>
   </section>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
 </body>
+
+<script id="todo-template" type="text/template">
+  <div class="todo">
+    <label class="todo-label"><input type="checkbox" name="check" class="check">{todoText}</label>
+    <a class="edit" href="#">Edit</a>
+    <a class="delete" href="#">Delete</a>
+  </div>
+</script>
+
+<script src="core/events.js"></script>
+<script src="core/interpolator.js"></script>
+<script src="modules/add.js"></script>
+<script src="modules/show_list.js"></script>
+<script src="modules/todo.js"></script>
+<script src="modules/todo_list.js"></script>
+<script src="app.js"></script>
+
+
 </html>
