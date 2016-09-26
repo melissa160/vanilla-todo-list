@@ -27,6 +27,10 @@ h3{
 	text-align: left;
 	width: 150px;
 }
+
+.art-todolist, .art-completed{
+	margin-top: 20px;
+}
 .raya-align{
 	border-top:2px solid black; 
 	width: 300px;
@@ -36,7 +40,7 @@ h3{
 
 input, a, label{
 	margin-top: 10px;
-	margin-bottom: 30px;
+
 }
 input{
 	border-radius: 5px;

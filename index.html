@@ -21,18 +21,18 @@
         </div>
 
       </article>
-      <article>
+      <article class="art-todolist">
         <h3>TODO</h3>
         <div class="raya-align">
           <div id="todo-list" class="todo-list">
           </div>
         </div>
       </article>
-      <article>
+      <article class="art-completed">
         <h3>COMPLETED</h3>
         <div class="raya-align">
           <label class="completed">Este es un todo</label>
-          <a class="delete" href="#">Delete</a>
+          <a class="delete" href="#" id="delete">Delete</a>
         </div>
       </article>
   </section>
@@ -43,13 +43,14 @@
   <div class="todo">
     <label class="todo-label"><input type="checkbox" name="check" class="check">{todoText}</label>
     <a class="edit" href="#">Edit</a>
-    <a class="delete" href="#">Delete</a>
+    <a class="delete" href="#" id="delete">Delete</a>
   </div>
 </script>
 
 <script src="core/events.js"></script>
 <script src="core/interpolator.js"></script>
 <script src="modules/add.js"></script>
+<script src="modules/delete.js"></script>
 <script src="modules/show_list.js"></script>
 <script src="modules/todo.js"></script>
 <script src="modules/todo_list.js"></script>

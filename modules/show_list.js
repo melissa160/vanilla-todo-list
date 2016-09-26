@@ -1,5 +1,6 @@
 var ShowList = (function(Events, Interpolator){
     var _render = function(todoList){
+        //validaciones
         if(!(todoList instanceof Object)){
             throw new Error("todoList must be an Object");
             return;
@@ -9,7 +10,8 @@ var ShowList = (function(Events, Interpolator){
             return;
         }
 
-        var element = document.getElementById(todoList.elementId);
+        //
+        var element = document.getElementById(todoList.elementId);//
 
         // Delete inner nodes
         element.innerHTML = '';
@@ -24,7 +26,7 @@ var ShowList = (function(Events, Interpolator){
             return node;
         }
 
-        var listNodes = list.map(renderTodo);
+        var listNodes = list.map(renderTodo);//hace un mapeo de la lista pasandole el node que devuelve la funcion renderTodo
 
         listNodes.forEach(function(todoNode){
             element.appendChild(todoNode);
@@ -33,7 +35,7 @@ var ShowList = (function(Events, Interpolator){
     }
 
     var _init = function(){
-        Events.on('todo_added', function(todoList){
+        Events.on('todo_added', function(todoList){//esta escuchando 
             _render(todoList);
         });
     }
